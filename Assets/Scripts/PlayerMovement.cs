@@ -5,15 +5,17 @@ using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-   List<Vector2> points = new List<Vector2>() { };
-
+    List<Vector2> points = new List<Vector2>() { };
+    
     public float speed = 10f;
-
-
-    Vector2 lastClicedPos { get; set; }
-
+    Vector2 lastClicedPos;
     bool is_move;
+
+    private void Start()
+    {
+        
+
+    }
 
     private void Update()
     {
@@ -25,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
             points.Add(lastClicedPos);
 
             is_move = true;
+
+            
         }
 
 
